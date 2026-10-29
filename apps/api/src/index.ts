@@ -72,6 +72,22 @@ async function main() {
   // Health check
   app.get('/health', async () => ({ status: 'ok', time: new Date().toISOString() }));
 
+  // Root welcome & service discovery endpoint
+  app.get('/', async () => ({
+    service: 'DevX Commerce Suite API',
+    status: 'online',
+    version: '1.0.0',
+    endpoints: {
+      health: '/health',
+      widget: '/cartx.js',
+      catalog: '/v1/products',
+      collections: '/v1/collections',
+      config: '/v1/config',
+      search: '/v1/search?q=sneakers',
+      retail: '/v1/retail/locations',
+    },
+  }));
+
   const port = Number(process.env.PORT) || 4000;
   try {
     await app.listen({ port, host: '0.0.0.0' });
