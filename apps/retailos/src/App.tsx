@@ -27,9 +27,9 @@ import {
 } from 'lucide-react';
 import { formatPaise } from '@cartx/shared';
 
-const API_BASE = (import.meta as any).env?.VITE_API_BASE || 'http://localhost:4000';
-const STORE_URL = (import.meta as any).env?.VITE_STORE_URL || 'http://localhost:5174';
-const CONSOLE_URL = (import.meta as any).env?.VITE_CONSOLE_URL || 'http://localhost:5173';
+const API_BASE = (import.meta as any).env?.VITE_API_BASE || 'https://devx-commerce-api.onrender.com';
+const STORE_URL = (import.meta as any).env?.VITE_STORE_URL || 'https://devx-3.vercel.app';
+const CONSOLE_URL = (import.meta as any).env?.VITE_CONSOLE_URL || 'https://devx-console.vercel.app';
 
 type RetailTab = 'pos' | 'bopis' | 'returns' | 'inventory' | 'shifts' | 'clienteling';
 

@@ -3,9 +3,9 @@ import { ShoppingBag, Zap, RefreshCw, ExternalLink, Sparkles, CheckCircle2, Shie
 import { Product, Collection, formatPaise } from '@cartx/shared';
 import { SearchOverlay } from './components/SearchOverlay';
 
-const API_BASE = (import.meta as any).env?.VITE_API_BASE || 'http://localhost:4000';
-const CONSOLE_URL = (import.meta as any).env?.VITE_CONSOLE_URL || 'http://localhost:5173';
-const RETAILOS_URL = (import.meta as any).env?.VITE_RETAILOS_URL || 'http://localhost:5175';
+const API_BASE = (import.meta as any).env?.VITE_API_BASE || 'https://devx-commerce-api.onrender.com';
+const CONSOLE_URL = (import.meta as any).env?.VITE_CONSOLE_URL || 'https://devx-console.vercel.app';
+const RETAILOS_URL = (import.meta as any).env?.VITE_RETAILOS_URL || 'https://devx-retailos.vercel.app';
 
 export default function App() {
   const [products, setProducts] = useState<Product[]>([]);
