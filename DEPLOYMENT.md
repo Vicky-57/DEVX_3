@@ -24,7 +24,7 @@ This guide explains how to deploy the **DevX Commerce Suite** (CartX, SearchX, R
 1. Create a **New Web Service** and connect your Git repository.
 2. Configure settings:
    - **Root Directory**: `apps/api` (or monorepo root)
-   - **Build Command**: `npm install && npm run build -w @cartx/shared && npm run build -w @cartx/widget && npm run build -w @cartx/api`
+   - **Build Command**: `npm install --include=dev && npm run build -w @cartx/shared && npm run build -w @cartx/widget && npm run build -w @cartx/api`
    - **Start Command**: `npm run seed -w @cartx/api && npm start -w @cartx/api`
    - **Environment Variables**:
      - `PORT`: `4000` (or leave default, Fastify reads `process.env.PORT`)
