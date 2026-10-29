@@ -1,0 +1,15 @@
+{
+  "name": "@cartx/widget",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch"
+  },
+  "dependencies": {
+    "@cartx/shared": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "vite": "^6.2.0"
+  }
+}

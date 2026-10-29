@@ -1,0 +1,21 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: devx-commerce-api
+    restart: unless-stopped
+    ports:
+      - "4000:4000"
+    environment:
+      - PORT=4000
+      - NODE_ENV=production
+      - DATA_DIR=/app/data
+      - DB_PATH=/app/data/cartx.db
+    volumes:
+      - devx-data:/app/data
+
+volumes:
+  devx-data:
+    driver: local
+

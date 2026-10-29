@@ -1,0 +1,24 @@
+{
+  "name": "devx-commerce",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n \"api,widget,console,store,pos\" -c \"blue,green,magenta,yellow,cyan\" \"npm run dev -w @cartx/api\" \"npm run dev -w @cartx/widget\" \"npm run dev -w @cartx/console\" \"npm run dev -w @cartx/demo-store\" \"npm run dev -w @cartx/retailos\"",
+    "dev:backend": "npm run dev -w @cartx/api",
+    "dev:console": "npm run dev -w @cartx/console",
+    "dev:store": "npm run dev -w @cartx/demo-store",
+    "dev:retailos": "npm run dev -w @cartx/retailos",
+    "build": "npm run build -w @cartx/shared && npm run build -w @cartx/widget && npm run build -w @cartx/api && npm run build -w @cartx/console && npm run build -w @cartx/demo-store && npm run build -w @cartx/retailos",
+    "seed": "npm run seed -w @cartx/api",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.7"
+  }
+}
